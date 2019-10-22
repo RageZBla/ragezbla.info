@@ -1,7 +1,160 @@
-<html>
-    <body>
-        <h1>Ragezbla</h1>
-        foobar
-        <img style="margin: 0px auto; text-align: center;" src="https://media.giphy.com/media/dbtDDSvWErdf2/giphy.gif"/>
-    </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/asset/css/index.css">
+    <title>Olivier Lechevalier [ragezbla]</title>
+</head>
+
+<body class="font-sans text-black leading-tight antialiased">
+    <div id="app" class="py-8 lg:py-16 px-6 md:px-16 lg:px-24">
+        <div class="relative z-20 flex justify-between items-center">
+            <div class="flex md:block lg:flex items-center max-w-full">
+                <div class="mb-0 md:mb-4 lg:mb-0 flex flex-no-shrink pr-4 md:pr-6 lg:pr-12">
+                    <a href="/" class="flex items-center no-underline">
+                        <img class="h-10 w-10 md:h-12 md:w-12 lg:h-20 lg:w-20"
+                            src="https://avatars.githubusercontent.com/u/1196871" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="/"
+                        class="block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight">Lechevalier
+                        Olivier &mdash; RagezBla</a>
+                    <div class="hidden md:flex mt-3 lg:mt-4 uppercase tracking-wide text-xs spaced-x-6">
+                        <!--
+                            <a href="/resume.html"
+                            class="text-grey-dark font-semibold no-underline hover:text-black">Resume</a>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="block md:hidden">
+                <button class="block" @click="toggleMenu">
+                    <svg :class="menuOpen ? 'hidden' : 'block'" class="block text-black h-6 w-6" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+                    <svg :class="menuOpen ? 'block' : 'hidden'" class="text-black h-6 w-6" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path
+                            d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                        </svg>
+                </button>
+            </div>
+        </div>
+        <div :class="menuOpen ? 'block' : 'hidden'" class="md:hidden container z-10 bg-white fixed pin pt-24">
+            <div class="spaced-y-8 overflow-y-auto pt-6 pb-8 px-12 max-h-full overflow-y-auto">
+                <!-- <a href="/resume.html" class="block text-black font-bold no-underline">Resume</a> -->
+            </div>
+        </div>
+
+        <div class="lg:pl-32">
+            <div class="max-w-md">
+                <h2 class="text-2xl font-bold text-grey-dark mb-4">Bringing the chaos to Internet since late nineties!</h2>
+            </div>
+            <div class="flex content-center flex-wrap">
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://github.com/RageZBla" class="items-center block flex hover:bg-gray-100 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <title>GitHub</title>
+                                <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://gitlab.com/ragez" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 559">
+                                <title>GitLab</title>
+                                <path d="m461.48 298.35l-17.78-54.63a7.72 7.72 0 0 0 -.43 -1.47l-35.67-109.8a14.18 14.18 0 0 0 -13.54 -9.67 13.94 13.94 0 0 0 -13.38 9.75l-34 104.63h-107.31l-34.05-104.63a13.94 13.94 0 0 0 -13.32 -9.75h-.08a14.22 14.22 0 0 0 -13.5 9.76l-35.7 109.93c0 .1-.08.18-.11.28l-18.1 55.61a20.29 20.29 0 0 0 7.37 22.71l156.38 113.63a8 8 0 0 0 9.45 -.05l156.41-113.58a20.28 20.28 0 0 0 7.36 -22.72m-233.75-45.13l43.59 134.16-104.64-134.16m148.05 134.19l41.8-128.62 1.8-5.57h61.1l-94.67 121.28m69.44-231.67l30.63 94.33h-61.31m-22.03 16l-30.37 93.46-18.12 55.66-48.42-149.12m-52.73-110.33l30.69 94.33h-61.27m-19.98 70.97a4.31 4.31 0 0 1 -1.56 -4.83l13.44-41.3 98.57 126.37m192.98-80.24l-110.46 80.21.37-.48 98.2-125.86 13.44 41.28a4.31 4.31 0 0 1 -1.55 4.84"/>
+                            </svg>                                
+                            GitLab
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://dev.to/ragezbla" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.000000 65.000000">
+                                <title>Dev.to</title>
+                                <path d="M0 33v32h11.3c12.5 0 17.7-1.6 21.5-6.5 3.8-4.8 4.4-9 4-28-.3-16.8-.5-18.2-2.7-21.8C30.3 2.5 26.1 1 12 1H0v32zm23.1-19.1c2.3 1.9 2.4 2.3 2.4 18.5 0 15.7-.1 16.7-2.2 18.8-1.7 1.6-3.5 2.2-7 2.2l-4.8.1-.3-20.8L11 12h4.9c3.3 0 5.6.6 7.2 1.9zM46.1 3.6c-2 2.6-2.1 3.9-2.1 29.6v26.9l2.5 2.4c2.3 2.4 2.9 2.5 16 2.5H76V54.1l-10.2-.3-10.3-.3v-15l6.3-.3 6.2-.3V27H55V12h21V1H62.1c-13.9 0-14 0-16 2.6zM87 15.2c2.1 7.9 5.5 20.8 7.6 28.8 3.2 12.3 4.3 15 7 17.7 1.9 2 4.2 3.3 5.7 3.3 3.1 0 7.1-3.1 8.5-6.7 1-2.6 15.2-55.6 15.2-56.8 0-.3-2.8-.5-6.2-.3l-6.3.3-5.6 21.5c-3.5 13.6-5.8 20.8-6.2 19.5C105.9 40 96 1.9 96 1.4c0-.2-2.9-.4-6.4-.4h-6.4L87 15.2z"></path>
+                            </svg>
+                            Dev.to
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://stackoverflow.com/users/169442/ragez" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.000000 65.000000">
+                                <title>Stack Overflow</title>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st0" d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"/>
+                                <path xmlns="http://www.w3.org/2000/svg" class="st1" d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"/>
+                            </svg>
+                            Stack Overflow
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://www.linkedin.com/in/olechevalier" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 382">
+                                <title>LinkedIn</title>
+                                <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://twitter.com/ragezbla" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <title>Twitter</title>
+                                <path d="M6.29 18.25c7.55 0 11.67-6.25 11.67-11.67v-.53c.8-.59 1.49-1.3 2.04-2.13-.75.33-1.54.55-2.36.65a4.12 4.12 0 0 0 1.8-2.27c-.8.48-1.68.81-2.6 1a4.1 4.1 0 0 0-7 3.74 11.65 11.65 0 0 1-8.45-4.3 4.1 4.1 0 0 0 1.27 5.49C2.01 8.2 1.37 8.03.8 7.7v.05a4.1 4.1 0 0 0 3.3 4.03 4.1 4.1 0 0 1-1.86.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 16.4a11.62 11.62 0 0 0 6.29 1.84"></path>
+                            </svg>
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+                <div class="w-1/8 p-2">
+                    <div class="text-gray-700 text-center p-2">
+                        <a href="https://www.flickr.com/photos/ragez/" class="items-center block flex hover:text-gray-700 mr-5">
+                            <svg class="fill-current w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 50">
+                                <title>Flickr</title>
+                                <path d="M3.008 23.64H0V20h3.095v-.977c0-4.484 2.112-6.046 6.276-6.046 1.13 0 1.998.174 2.663.29l-.32 3.587c-.433-.145-.866-.234-1.65-.234-1.33 0-1.848.926-1.848 2.403V20h3.77v3.64h-3.77v11.38H3.008V23.64zM14 13.32h5.21v21.7H14v-21.7zM21.808 13.668h5.205v3.82h-5.205zM21.808 19.984h5.205v15.034h-5.205zM41.136 24.256c-.956-.577-1.908-.836-3.15-.836-2.26 0-3.994 1.563-3.994 4.165 0 2.398 2.024 3.96 4.28 3.96 1.187 0 2.372-.258 3.24-.72l.117 3.875c-1.302.433-2.864.666-4.255.666-4.974 0-8.763-2.894-8.763-7.87 0-5.006 3.79-7.897 8.763-7.897 1.563 0 2.952.262 4.138.84l-.377 3.816zM43.798 13.32h5.206v12.962h.057l4.34-6.334h5.698l-5.234 6.916 5.668 8.155h-6.306l-4.166-7.465h-.057v7.464h-5.206v-21.7zM71.745 24.113c-.578-.175-1.154-.175-1.763-.175-2.43 0-3.792 1.767-3.792 4.718v6.363h-5.203V19.947h4.743v2.777h.056c.898-1.91 2.2-3.125 4.457-3.125.607 0 1.245.085 1.763.174l-.26 4.34z"></path>
+                            </svg>
+                            Flickr
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+            <script>
+                new Vue({
+                    el: '#app',
+                    data: {
+                        menuOpen: true
+                    },
+                    methods: {
+                        toggleMenu: function () {
+                            if (this.menuOpen) {
+                                this.menuOpen = false
+                                document.body.classList.remove('scrolling-auto', 'overflow-hidden', 'fixed', 'pin-x')
+                            } else {
+                                this.menuOpen = true
+                                document.body.classList.add('scrolling-auto', 'overflow-hidden', 'fixed', 'pin-x')
+                            }
+                        }
+                    }
+                })
+            </script>
+</body>
+
 </html>

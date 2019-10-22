@@ -4,3 +4,13 @@
 
 @tailwind utilities;
 
+.spaced-y-8 > * {
+    margin-bottom: 2rem;
+}
+
+.pin {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}
